@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <title>主页</title>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">电影天堂</a>
+                </div>
+                <div>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="每页最大显示条数" id="lineInput">
+                        </div>
+                        <button class="btn btn-default" id='showButton'>显示</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <script src="./js/jquery-3.2.0.min.js" charset="utf-8"></script>
+        <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="./js/q.js" charset="utf-8"></script>
+    </body>
+</html>

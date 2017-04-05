@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title 主页
+    link(rel='stylesheet', href='./css/bootstrap.min.css')
+  body
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') 电影天堂
+        div
+          form.navbar-form.navbar-right
+            .form-group
+              input#lineInput.form-control(type='number', placeholder='每页最大显示条数')
+            button#showButton.btn.btn-default 显示
+    .container
+        h4 共收录电影#{total}条
+        h5 当前#{nowPage}页
+        each item, i in movieList
+            div.panel.panel-info
+                div.panel-heading 第#{i+1}条  #{item.movieTitle}
+                div.panel-body(style="word-wrap:break-word") #{item.downUrl}
+        nav(aria-label="Page navigation")
+            ul.pager
+                li.previous
+                    a(href="/?line="+line+"&page="+((nowPage*1)-1))
+                        span(aria-hidden="true") &larr; 上一页
+                li.next
+                    a(href="/?line="+line+"&page="+((nowPage*1)+1))
+                        span(aria-hidden="true") &rarr; 下一页
+
+    script(src='./js/jquery-3.2.0.min.js', charset='utf-8')
+    script(src='./js/bootstrap.min.js', charset='utf-8')
+    script(src='./js/q.js', charset='utf-8')
